@@ -1,0 +1,182 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Bon Appetit - Recetario</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"></link>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Pinyon+Script&amp;family=Quicksand:wght@300..700&amp;display=swap" rel="stylesheet"></link>
+
+    <style>
+        /* Estilos Generales con la paleta de colores de tus imágenes */
+        :root {
+            --fondo-crema: #F9F6F0;
+            --marron-oscuro: #5C4033;
+            --marron-suave: #8B7355;
+            --rosa-fresa: #E79A8F;
+            --blanco-pergamino: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--fondo-crema);
+            font-family: 'Quicksand', sans-serif;
+            color: var(--marron-oscuro);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor Principal estilo página de libro antiguo */
+        .book-container {
+            max-width: 800px;
+            width: 90%;
+            background-color: var(--blanco-pergamino);
+            margin: 40px auto;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(92, 64, 51, 0.08);
+            border: 1px solid rgba(139, 115, 85, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Detalles estéticos (Líneas divisorias vintage) */
+        .book-container::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 1px solid rgba(139, 115, 85, 0.15);
+            border-radius: 12px;
+            pointer-events: none;
+        }
+
+        /* Subtítulo manuscrito tipo "Linda Rodriguez" de tu portada */
+        .brand-subtitle {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 2.5rem;
+            color: var(--marron-suave);
+            margin: 0;
+            line-height: 1;
+        }
+
+        /* Título Principal */
+        .brand-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 10px 0 20px 0;
+            color: var(--marron-oscuro);
+        }
+
+        .divider {
+            width: 120px;
+            height: 2px;
+            background-color: var(--rosa-fresa);
+            margin: 0 auto 30px auto;
+            border-radius: 2px;
+        }
+
+        /* Descripción de la página */
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            color: var(--marron-suave);
+            font-style: italic;
+        }
+
+        /* Sección de Recetas */
+        .recipes-section {
+            margin-top: 50px;
+        }
+
+        .recipes-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            color: var(--marron-oscuro);
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Rejilla de Botones / Tarjetas */
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        /* Estilo de los Botones de Recetas */
+        .recipe-btn {
+            display: block;
+            text-decoration: none;
+            background-color: var(--fondo-crema);
+            color: var(--marron-oscuro);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 25px 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(139, 115, 85, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        /* Efecto al pasar el mouse (Hover) */
+        .recipe-btn:hover {
+            background-color: var(--rosa-fresa);
+            color: white;
+            transform: translateY(-4px);
+            border-color: var(--rosa-fresa);
+            box-shadow: 0 6px 15px rgba(231, 154, 143, 0.4);
+        }
+
+        /* Pequeño detalle floral o responsivo al final */
+        .footer-detail {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 2rem;
+            color: var(--rosa-fresa);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="book-container">
+        <p class="brand-subtitle">Le Petit</p>
+        <h1 class="brand-title">Bon Appétit</h1>
+        <div class="divider"></div>
+        
+        <p class="description">
+            Bienvenidos a mi recetario digital. Un espacio dedicado al amor por la cocina, 
+            los aromas nostálgicos y los sabores que abrazan el alma. Aquí encontrarás 
+            desde postres clásicos hasta preparaciones tradicionales explicadas paso a paso.
+        </p>
+
+        <div class="recipes-section">
+            <h2>— Recetas —</h2>
+            
+            <div class="recipe-grid">
+                <a class="recipe-btn" href="https://bonappetitbylinda.blogspot.com/2026/06/torta-de-chocolate.html">Torta de Chocolate</a>
+                <a class="recipe-btn" href="https://bonappetitbylinda.blogspot.com/2026/06/postre-chaja.html">Postre Chajá</a>
+                <a class="recipe-btn" href="https://bonappetitbylinda.blogspot.com/2026/06/pie-de-limon.html">Pie de Limón</a>
+            </div>
+        </div>
+
+        <div class="footer-detail">Bon Appétit</div>
+    </div>
+
+</body>
+</html>
